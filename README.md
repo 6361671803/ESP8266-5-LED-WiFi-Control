@@ -20,6 +20,8 @@ This project demonstrates wireless control of 5 LEDs using ESP8266 connected to 
 3. Note the IP address
 4. Open IP in browser
 5. Control LEDs
+
+
 author:mohammed fahad
 
 ## Author
