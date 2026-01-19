@@ -1,0 +1,228 @@
+<svg viewBox="0 0 1000 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for realistic effects -->
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d2d2d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2e5f8f;stop-opacity:0.9" />
+    </linearGradient>
+    <radialGradient id="routerGlow">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="ledGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="35" font-size="26" font-weight="bold" text-anchor="middle" fill="#333">
+    ESP8266 Wi-Fi LED Control System
+  </text>
+  
+  <!-- Mobile Phone -->
+  <g id="mobile">
+    <rect x="120" y="80" width="120" height="220" rx="15" fill="url(#phoneGrad)" stroke="#000" stroke-width="3"/>
+    <rect x="130" y="100" width="100" height="180" rx="5" fill="url(#screenGlow)"/>
+    <circle cx="180" cy="92" r="4" fill="#444"/>
+    <rect x="165" y="270" width="30" height="15" rx="7" fill="#333"/>
+    
+    <!-- Phone screen content -->
+    <text x="180" y="125" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">LED Control</text>
+    <rect x="145" y="140" width="70" height="25" rx="5" fill="#4CAF50" stroke="#2e7d32" stroke-width="1"/>
+    <text x="180" y="158" font-size="10" font-weight="bold" text-anchor="middle" fill="#fff">LED 1 ON</text>
+    <rect x="145" y="175" width="70" height="25" rx="5" fill="#f44336" stroke="#c62828" stroke-width="1"/>
+    <text x="180" y="193" font-size="10" font-weight="bold" text-anchor="middle" fill="#fff">LED 2 OFF</text>
+    <rect x="145" y="210" width="70" height="25" rx="5" fill="#4CAF50" stroke="#2e7d32" stroke-width="1"/>
+    <text x="180" y="228" font-size="10" font-weight="bold" text-anchor="middle" fill="#fff">LED 3 ON</text>
+    
+    <text x="180" y="65" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Mobile Phone</text>
+  </g>
+  
+  <!-- Laptop -->
+  <g id="laptop">
+    <rect x="680" y="140" width="200" height="120" rx="5" fill="url(#laptopGrad)" stroke="#333" stroke-width="3"/>
+    <rect x="690" y="150" width="180" height="100" rx="3" fill="url(#screenGlow)"/>
+    <polygon points="650,260 930,260 900,280 680,280" fill="#999" stroke="#333" stroke-width="3"/>
+    <ellipse cx="790" cy="270" rx="25" ry="5" fill="#666"/>
+    
+    <!-- Laptop screen content -->
+    <rect x="700" y="165" width="160" height="20" rx="3" fill="#1e88e5"/>
+    <text x="780" y="180" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">192.168.1.100</text>
+    <rect x="710" y="195" width="65" height="20" rx="3" fill="#4CAF50"/>
+    <text x="742" y="209" font-size="9" text-anchor="middle" fill="#fff">LED ON</text>
+    <rect x="785" y="195" width="65" height="20" rx="3" fill="#f44336"/>
+    <text x="817" y="209" font-size="9" text-anchor="middle" fill="#fff">LED OFF</text>
+    
+    <text x="780" y="125" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Laptop / PC</text>
+  </g>
+  
+  <!-- WiFi signals from devices -->
+  <path d="M 180 310 Q 400 330 480 370" stroke="#4a90e2" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+  <path d="M 780 265 Q 600 300 520 370" stroke="#4a90e2" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+  
+  <!-- WiFi icons -->
+  <g transform="translate(350, 320)">
+    <path d="M 0 15 Q -8 7 -15 5 Q -8 3 0 -5 Q 8 3 15 5 Q 8 7 0 15" fill="none" stroke="#4a90e2" stroke-width="2"/>
+    <path d="M 0 10 Q -5 5 -8 4 Q -5 3 0 -2 Q 5 3 8 4 Q 5 5 0 10" fill="none" stroke="#4a90e2" stroke-width="2"/>
+    <circle cx="0" cy="7" r="2" fill="#4a90e2"/>
+  </g>
+  <g transform="translate(650, 290)">
+    <path d="M 0 15 Q -8 7 -15 5 Q -8 3 0 -5 Q 8 3 15 5 Q 8 7 0 15" fill="none" stroke="#4a90e2" stroke-width="2"/>
+    <path d="M 0 10 Q -5 5 -8 4 Q -5 3 0 -2 Q 5 3 8 4 Q 5 5 0 10" fill="none" stroke="#4a90e2" stroke-width="2"/>
+    <circle cx="0" cy="7" r="2" fill="#4a90e2"/>
+  </g>
+  
+  <!-- Wi-Fi Router -->
+  <g id="router">
+    <rect x="400" y="370" width="200" height="80" rx="8" fill="#2c3e50" stroke="#000" stroke-width="3"/>
+    <circle cx="600" cy="390" r="35" fill="url(#routerGlow)"/>
+    
+    <!-- Router details -->
+    <circle cx="430" cy="390" r="6" fill="#4CAF50"/>
+    <circle cx="450" cy="390" r="6" fill="#4CAF50"/>
+    <circle cx="470" cy="390" r="6" fill="#FFC107"/>
+    <circle cx="490" cy="390" r="6" fill="#4CAF50"/>
+    
+    <!-- Antennas -->
+    <rect x="415" y="355" width="8" height="45" rx="4" fill="#34495e" stroke="#000" stroke-width="2"/>
+    <rect x="577" y="355" width="8" height="45" rx="4" fill="#34495e" stroke="#000" stroke-width="2"/>
+    <ellipse cx="419" cy="353" rx="12" ry="6" fill="#1a252f"/>
+    <ellipse cx="581" cy="353" rx="12" ry="6" fill="#1a252f"/>
+    
+    <!-- Router label -->
+    <rect x="420" y="420" width="160" height="18" rx="3" fill="#34495e"/>
+    <text x="500" y="433" font-size="11" font-weight="bold" text-anchor="middle" fill="#ecf0f1">Wi-Fi Router</text>
+    
+    <text x="500" y="340" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Wi-Fi Router</text>
+  </g>
+  
+  <!-- Connection arrow down -->
+  <line x1="500" y1="455" x2="500" y2="510" stroke="#4a90e2" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <text x="520" y="485" font-size="12" font-weight="bold" fill="#4a90e2">Wi-Fi</text>
+  
+  <!-- ESP8266 Module -->
+  <g id="esp8266">
+    <rect x="350" y="520" width="300" height="140" rx="5" fill="#1a1a1a" stroke="#000" stroke-width="3"/>
+    
+    <!-- PCB texture -->
+    <rect x="360" y="530" width="280" height="120" rx="3" fill="#2c5f2d" stroke="#1a3a1a" stroke-width="2"/>
+    
+    <!-- ESP8266 chip -->
+    <rect x="420" y="550" width="80" height="80" rx="3" fill="#1a1a1a" stroke="#888" stroke-width="2"/>
+    <text x="460" y="580" font-size="10" font-weight="bold" text-anchor="middle" fill="#fff">ESP</text>
+    <text x="460" y="595" font-size="10" font-weight="bold" text-anchor="middle" fill="#fff">8266</text>
+    <text x="460" y="610" font-size="8" text-anchor="middle" fill="#888">NodeMCU</text>
+    
+    <!-- Pin headers -->
+    <rect x="365" y="560" width="40" height="8" fill="#ffd700" stroke="#b8860b" stroke-width="1"/>
+    <rect x="365" y="585" width="40" height="8" fill="#ffd700" stroke="#b8860b" stroke-width="1"/>
+    <rect x="365" y="610" width="40" height="8" fill="#ffd700" stroke="#b8860b" stroke-width="1"/>
+    
+    <rect x="595" y="560" width="40" height="8" fill="#ffd700" stroke="#b8860b" stroke-width="1"/>
+    <rect x="595" y="585" width="40" height="8" fill="#ffd700" stroke="#b8860b" stroke-width="1"/>
+    <rect x="595" y="610" width="40" height="8" fill="#ffd700" stroke="#b8860b" stroke-width="1"/>
+    
+    <!-- USB port -->
+    <rect x="485" y="525" width="30" height="12" fill="#c0c0c0" stroke="#666" stroke-width="1"/>
+    <rect x="490" y="528" width="20" height="6" fill="#1a1a1a"/>
+    
+    <!-- WiFi antenna trace -->
+    <path d="M 520 555 Q 540 545 560 555" stroke="#ffd700" stroke-width="2" fill="none"/>
+    <path d="M 525 560 Q 540 552 555 560" stroke="#ffd700" stroke-width="2" fill="none"/>
+    
+    <!-- Status LEDs on board -->
+    <circle cx="570" cy="545" r="4" fill="#4CAF50"/>
+    <circle cx="585" cy="545" r="4" fill="#2196F3"/>
+    
+    <!-- Labels -->
+    <text x="390" y="575" font-size="8" fill="#fff">D1</text>
+    <text x="390" y="600" font-size="8" fill="#fff">D2</text>
+    <text x="390" y="625" font-size="8" fill="#fff">D3</text>
+    <text x="610" y="575" font-size="8" fill="#fff">D4</text>
+    <text x="610" y="600" font-size="8" fill="#fff">D5</text>
+    <text x="610" y="625" font-size="8" fill="#fff">GND</text>
+    
+    <text x="500" y="500" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">ESP8266 NodeMCU</text>
+    <text x="500" y="680" font-size="11" text-anchor="middle" fill="#555">(Web Server + Controller)</text>
+  </g>
+  
+  <!-- Wires to LEDs -->
+  <line x1="385" y1="660" x2="250" y2="740" stroke="#ff6600" stroke-width="4"/>
+  <line x1="395" y1="660" x2="350" y2="740" stroke="#ff8800" stroke-width="4"/>
+  <line x1="500" y1="660" x2="450" y2="740" stroke="#ffaa00" stroke-width="4"/>
+  <line x1="605" y1="660" x2="550" y2="740" stroke="#ffcc00" stroke-width="4"/>
+  <line x1="615" y1="660" x2="650" y2="740" stroke="#ffee00" stroke-width="4"/>
+  
+  <!-- LEDs with realistic appearance -->
+  <g id="led1">
+    <ellipse cx="250" cy="780" rx="25" ry="35" fill="url(#ledGlow)" stroke="#000" stroke-width="2"/>
+    <ellipse cx="250" cy="770" rx="20" ry="20" fill="#ff9999" opacity="0.6"/>
+    <circle cx="250" cy="785" r="15" fill="url(#routerGlow)"/>
+    <line x1="250" y1="740" x2="250" y2="750" stroke="#c0c0c0" stroke-width="3"/>
+    <line x1="250" y1="815" x2="250" y2="835" stroke="#808080" stroke-width="3"/>
+    <text x="250" y="860" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">LED 1</text>
+  </g>
+  
+  <g id="led2">
+    <ellipse cx="350" cy="780" rx="25" ry="35" fill="#4CAF50" stroke="#000" stroke-width="2"/>
+    <ellipse cx="350" cy="770" rx="20" ry="20" fill="#81c784" opacity="0.6"/>
+    <circle cx="350" cy="785" r="15" fill="url(#routerGlow)"/>
+    <line x1="350" y1="740" x2="350" y2="750" stroke="#c0c0c0" stroke-width="3"/>
+    <line x1="350" y1="815" x2="350" y2="835" stroke="#808080" stroke-width="3"/>
+    <text x="350" y="860" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">LED 2</text>
+  </g>
+  
+  <g id="led3">
+    <ellipse cx="450" cy="780" rx="25" ry="35" fill="#2196F3" stroke="#000" stroke-width="2"/>
+    <ellipse cx="450" cy="770" rx="20" ry="20" fill="#64b5f6" opacity="0.6"/>
+    <circle cx="450" cy="785" r="15" fill="url(#routerGlow)"/>
+    <line x1="450" y1="740" x2="450" y2="750" stroke="#c0c0c0" stroke-width="3"/>
+    <line x1="450" y1="815" x2="450" y2="835" stroke="#808080" stroke-width="3"/>
+    <text x="450" y="860" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">LED 3</text>
+  </g>
+  
+  <g id="led4">
+    <ellipse cx="550" cy="780" rx="25" ry="35" fill="#FFC107" stroke="#000" stroke-width="2"/>
+    <ellipse cx="550" cy="770" rx="20" ry="20" fill="#ffd54f" opacity="0.6"/>
+    <circle cx="550" cy="785" r="15" fill="url(#routerGlow)"/>
+    <line x1="550" y1="740" x2="550" y2="750" stroke="#c0c0c0" stroke-width="3"/>
+    <line x1="550" y1="815" x2="550" y2="835" stroke="#808080" stroke-width="3"/>
+    <text x="550" y="860" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">LED 4</text>
+  </g>
+  
+  <g id="led5">
+    <ellipse cx="650" cy="780" rx="25" ry="35" fill="#9C27B0" stroke="#000" stroke-width="2"/>
+    <ellipse cx="650" cy="770" rx="20" ry="20" fill="#ba68c8" opacity="0.6"/>
+    <circle cx="650" cy="785" r="15" fill="url(#routerGlow)"/>
+    <line x1="650" y1="740" x2="650" y2="750" stroke="#c0c0c0" stroke-width="3"/>
+    <line x1="650" y1="815" x2="650" y2="835" stroke="#808080" stroke-width="3"/>
+    <text x="650" y="860" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">LED 5</text>
+  </g>
+  
+  <!-- Ground connections -->
+  <line x1="250" y1="835" x2="650" y2="835" stroke="#000" stroke-width="5"/>
+  <line x1="450" y1="835" x2="450" y2="860" stroke="#000" stroke-width="5"/>
+  
+  <!-- Ground symbol -->
+  <line x1="430" y1="860" x2="470" y2="860" stroke="#000" stroke-width="4"/>
+  <line x1="440" y1="867" x2="460" y2="867" stroke="#000" stroke-width="3"/>
+  <line x1="445" y1="873" x2="455" y2="873" stroke="#000" stroke-width="2"/>
+  <text x="450" y="892" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">GND</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4a90e2"/>
+    </marker>
+  </defs>
+</svg>
