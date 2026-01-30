@@ -23,6 +23,3 @@ This project demonstrates wireless control of 5 LEDs using ESP8266 connected to 
 
 
 author:mohammed fahad
-
-## Author
-rfa
